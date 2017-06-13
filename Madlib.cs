@@ -34,7 +34,7 @@ namespace Madlibs
             foreach (var kv in options)
             {
                 var choices = kv.Value;
-                var index = random.Next(0, choices.Length - 1);
+                var index = random.Next(0, choices.Length);
 
                 seed.Append(index);
                 result = InjectSingleValue(result, kv.Key, choices[index]);
